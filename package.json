@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "rita": "^3.1.2",
     "syllable": "^5.0.1"
-  }
+  },
+  "type": "module"
 }
