@@ -2,18 +2,20 @@ import {syllable} from 'https://esm.sh/syllable@5?bundle'
 
 
 export const getText = () => {
-    var text = document.getElementById('haiku-text').value;
+    const text = document.getElementById('haiku-text').value;
     var lineArray = text.split(/\.|\?|\!|\n/);
     if(lineArray.length >= 3) {
-        //remove beginning and trailing whitespace
         lineArray = lineArray.map(line => line.trim());
         console.log(lineArray.filter(line => /[a-zA-Z]+/.test(line)));
-        convertToHaiku(lineArray.filter(line => line.length > 0));
+        convertToHaiku(lineArray.filter(line => /[a-zA-Z]+/.test(line)));
+    } else {
+        window.alert("Please enter at least 3 lines of text.");
     }
 }
 
-const convertToHaiku = (text) => {
-    var haikuSyllables = text.map(line => syllable(line));
-    console.log(haikuSyllables);
+const convertToHaiku = (arr) => {
+    const sevenSyls = arr.filter(line => syllable(line) === 7);
+    const fiveSyls = arr.filter(line => syllable(line) === 5);
+    const haiku = sevenSyls && fiveSyls ? `${fiveSyls[Math.floor(Math.random() * fiveSyls.length)]}\n${sevenSyls[Math.floor(Math.random() * sevenSyls.length)]}\n${fiveSyls[Math.floor(Math.random() * fiveSyls.length)]}` : "No haiku found.";
     return haiku;
 }
