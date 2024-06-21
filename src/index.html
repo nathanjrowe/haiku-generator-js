@@ -17,13 +17,13 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="js/script.js" async defer></script>
+        <script type="module" src="js/script.js" async defer></script>
 
         <div id="haiku">
-            <h1>Haiku Generator</h1>
-            <p id="line1"></p>
-            <p id="line2"></p>
-            <p id="line3"></p>
-            <button id="generate">Generate</button>
+            <h1>Haiku Finder</h1>
+            <textarea autofocus id="haiku-text" rows="3" cols="50"></textarea>
+            <button id="generate" onclick="getText()">Generate</button>
+            <p id="haiku-output"></p>
+        </div>
     </body>
 </html>

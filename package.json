@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "pdf.js": "^0.1.0",
     "rita": "^3.1.2",
     "syllable": "^5.0.1"
   },
