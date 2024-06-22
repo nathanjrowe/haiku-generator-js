@@ -1,0 +1,91 @@
+/* Existing styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0e0e;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+#title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.01em;
+    font-size: 4rem;
+    color: aliceblue;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#rules, p {
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+
+#rules {
+    margin-top: 20px;
+}
+
+#description {
+    font-weight: bold;
+}
+
+#haiku textarea {
+    height: 100px;
+    font-size: 1.5rem;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+#haiku button {
+    font-size: 1.5rem;
+    color: #5105b4;
+    background-color: #f5f5f5;
+    border: 1px solid #5105b4;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+#haiku button:hover {
+    background-color: #5105b4;
+    color: #f5f5f5;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/* Mobile adjustments with media queries */
+
+@media (max-width: 768px) {
+    #title {
+        font-size: 3rem;
+    }
+    #rules, p, #haiku textarea, #haiku button {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #haiku textarea, #haiku button {
+        width: 90%; /* Makes input and button take up most of the screen width */
+    }
+
+    #haiku button {
+        padding: 10px 20px; /* Larger padding for easier interaction */
+    }
+}

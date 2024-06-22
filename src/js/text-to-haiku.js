@@ -16,6 +16,7 @@ export const getText = () => {
 const convertToHaiku = (arr) => {
     const sevenSyls = arr.filter(line => syllable(line) === 7);
     const fiveSyls = arr.filter(line => syllable(line) === 5);
-    const haiku = sevenSyls && fiveSyls ? `${fiveSyls[Math.floor(Math.random() * fiveSyls.length)]}\n${sevenSyls[Math.floor(Math.random() * sevenSyls.length)]}\n${fiveSyls[Math.floor(Math.random() * fiveSyls.length)]}` : "No haiku found.";
+    const haiku = sevenSyls.length && fiveSyls.length ? `${fiveSyls[Math.floor(Math.random() * fiveSyls.length)]}\n${sevenSyls[Math.floor(Math.random() * sevenSyls.length)]}\n${fiveSyls[Math.floor(Math.random() * fiveSyls.length)]}` : "No haiku found.";
+    document.getElementById('haiku-output').innerText = haiku;
     return haiku;
 }

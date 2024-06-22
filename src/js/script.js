@@ -1,3 +1,3 @@
-import { getText } from './fileReader.js';
+import { getText } from './text-to-haiku.js';
 
 window.getText = getText;

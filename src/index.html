@@ -18,12 +18,19 @@
         <![endif]-->
         
         <script type="module" src="js/script.js" async defer></script>
-
-        <div id="haiku">
-            <h1>Haiku Finder</h1>
-            <textarea autofocus id="haiku-text" rows="3" cols="50"></textarea>
+        <div class="container">
+            <h1 id="title">Haiku Finder</h1>
+            <p id="description">Welcome to Haiku Finder! This tool takes any entered text and tries to construct a random haiku from sentences in the text.</p>
+            <div id="rules">Rules:
+                <ul>
+                    <li>Entered text must have at least three sentences</li>
+                </ul>
+            </div>
+            <div id="haiku">
+            <textarea id="haiku-text" rows="3" cols="50"></textarea>
             <button id="generate" onclick="getText()">Generate</button>
             <p id="haiku-output"></p>
+            </div>
         </div>
     </body>
 </html>
