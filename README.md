@@ -1,5 +1,5 @@
 # haiku-generator-js
-A dumb computer tries to make a random haiku. Test it yourself <a>HERE</a>.
+A dumb computer tries to make a random haiku. Test it yourself <a href="https://nathanjrowe.github.io/haiku-generator-js/">HERE</a>.
 
 ## Dependencies
 - syllable.js: Used for estimating the syllable count of sentences.
